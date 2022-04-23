@@ -1,0 +1,5 @@
+require("autocmd")
+require("highlights")
+require("mappings")
+require("options")
+require("plugins")
