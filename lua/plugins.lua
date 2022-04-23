@@ -1,19 +1,16 @@
--- returns the require for use in `config` parameter of packer's use
--- expects the name of the config file
-
 function get_config(name)
   return string.format('require("config/%s")', name)
 end
 
--- Comment.nvim
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
-  use "famiu/bufdelete.nvim"
+  use "williamboman/nvim-lsp-installer"
   use "onsails/lspkind-nvim"
   use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/plenary.nvim"
   use "nvim-treesitter/nvim-treesitter-textobjects"
   use "rhysd/conflict-marker.vim"
+  use "famiu/bufdelete.nvim"
 
   use({ "kyazdani42/nvim-tree.lua", config = get_config("nvim-tree"), })
 
