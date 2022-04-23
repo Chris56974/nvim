@@ -101,6 +101,10 @@ wk.register({
 
 	h = { "<C-w>h<cr>", "Move left" },
 
+  j = { "<C-w>j<cr>", "Move down" },
+
+  k = { "<C-w>k<cr>", "Move up" },
+
 	l = { "<C-w>l<cr>", "Move right" },
 
 	m = {

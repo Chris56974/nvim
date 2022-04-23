@@ -9,8 +9,6 @@ local autogrp = vim.api.nvim_create_augroup
 -- vim.api.nvim_create_autocmd("BufEnter", { command = "echo 'Hello'", group = group })
 autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
 
--- vim.cmd([[ augroup LspFormatting
---                 autocmd! * <buffer>
---                 autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
---             augroup END
---             ]])
+local lsp = autogrp("LspFormatting", { clear = true })
+
+autocmd("BufWritePre", { command = "lua vim.lsp.buf.formatting_sync()", group = lsp })
