@@ -1,80 +1,57 @@
-function get_config(name)
-  return string.format('require("config/%s")', name)
-end
-
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
-  use "williamboman/nvim-lsp-installer"
-  use "onsails/lspkind-nvim"
+
+  -- Dependencies
   use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/plenary.nvim"
-  use "nvim-treesitter/nvim-treesitter-textobjects"
-  use "rhysd/conflict-marker.vim"
+
+  -- LSP
+  use "williamboman/nvim-lsp-installer"
+  use "onsails/lspkind-nvim"
+  use "neovim/nvim-lspconfig"
+  use "ray-x/lsp_signature.nvim"
+  use "jose-elias-alvarez/null-ls.nvim"
+
+  -- Code
+  use "ray-x/go.nvim"
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+  use "ThePrimeagen/harpoon"
+  use "echasnovski/mini.nvim"
   use "famiu/bufdelete.nvim"
+  use "norcalli/nvim-colorizer.lua"
+  use "LudoPinelli/comment-box.nvim"
+  use "nvim-treesitter/nvim-treesitter-textobjects"
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", })
+  use({ "folke/trouble.nvim", cmd = { "TroubleToggle", "Trouble" } })
 
-  use({ "kyazdani42/nvim-tree.lua", config = get_config("nvim-tree"), })
+  -- IDE
+  use "kyazdani42/nvim-tree.lua"
+  use "EdenEast/nightfox.nvim"
+  use "folke/which-key.nvim"
+  use "akinsho/nvim-toggleterm.lua"
+  use "ahmedkhalf/project.nvim"
 
-  use({ "neovim/nvim-lspconfig", config = get_config("lsp") })
-  use({ "ray-x/lsp_signature.nvim", config = get_config("lsp-signature") })
-  use({ "jose-elias-alvarez/null-ls.nvim", config = get_config("null-ls"), })
-
-  use({ "EdenEast/nightfox.nvim", config = get_config("nightfox") })
-  use({ "ThePrimeagen/harpoon", config = get_config("harpoon") })
-  use({ "ggandor/lightspeed.nvim", event = "BufReadPre" })
-  use({ "ray-x/go.nvim", config = get_config("go") })
-  use({ "LudoPinelli/comment-box.nvim", config = get_config("comment-box") })
-  use({ "echasnovski/mini.nvim", branch = "stable", config = get_config("mini") })
-
-  use({ "nvim-telescope/telescope.nvim", config = get_config("telescope"), })
+  -- Navigation
+  use "ggandor/lightspeed.nvim"
+  use "nvim-telescope/telescope.nvim"
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    config = get_config("treesitter"),
-    run = ":TSUpdate",
-  })
+  -- CMP
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "f3fora/cmp-spell"
+  use "hrsh7th/cmp-calc"
+  use "lukas-reineke/cmp-rg"
+  use "saadparwaiz1/cmp_luasnip"
 
-  use({
-    "hrsh7th/nvim-cmp",
-    requires = {
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-buffer" },
-      { "hrsh7th/cmp-path" },
-      { "hrsh7th/cmp-cmdline" },
-      { "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "lukas-reineke/cmp-rg" } },
-    },
-    config = get_config("cmp"),
-  })
+  -- Git
+  use "TimUntersberger/neogit"
+  use "sindrets/diffview.nvim"
+  use "lewis6991/gitsigns.nvim"
+  use "f-person/git-blame.nvim"
 
-  use({
-    "norcalli/nvim-colorizer.lua",
-    event = "BufReadPre",
-    config = get_config("colorizer"),
-  })
-
-  use "rafamadriz/friendly-snippets"
-  use({
-    "L3MON4D3/LuaSnip",
-    requires = "saadparwaiz1/cmp_luasnip",
-    config = get_config("luasnip"),
-  })
-
-  use({
-    "sindrets/diffview.nvim",
-    cmd = {
-      "DiffviewOpen",
-      "DiffviewClose",
-      "DiffviewToggleFiles",
-      "DiffviewFocusFiles",
-    },
-    config = get_config("diffview"),
-  })
-
-  use({ "TimUntersberger/neogit", cmd = "Neogit", config = get_config("neogit"), })
-  use({ "lewis6991/gitsigns.nvim", event = "BufReadPre", config = get_config("gitsigns") })
-  use({ "f-person/git-blame.nvim", config = get_config("git-blame") })
-  use({ "akinsho/nvim-toggleterm.lua", keys = { "<C-n>", "<leader>fl", "<leader>gt" }, config = get_config("toggleterm") })
-  use({ "folke/trouble.nvim", cmd = { "TroubleToggle", "Trouble" }, config = get_config("trouble") })
-  use({ "ahmedkhalf/project.nvim", config = get_config("project") })
-  use({ "folke/which-key.nvim", config = get_config("which") })
 end)

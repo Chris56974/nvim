@@ -70,7 +70,6 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
-    config = { 'require("config/luasnip")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
@@ -121,23 +120,13 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["comment-box.nvim"] = {
-    config = { 'require("config/comment-box")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/comment-box.nvim",
     url = "https://github.com/LudoPinelli/comment-box.nvim"
   },
-  ["conflict-marker.vim"] = {
-    loaded = true,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/start/conflict-marker.vim",
-    url = "https://github.com/rhysd/conflict-marker.vim"
-  },
   ["diffview.nvim"] = {
-    commands = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
-    config = { 'require("config/diffview")' },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/diffview.nvim",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
   ["friendly-snippets"] = {
@@ -146,40 +135,31 @@ _G.packer_plugins = {
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["git-blame.nvim"] = {
-    config = { 'require("config/git-blame")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
     url = "https://github.com/f-person/git-blame.nvim"
   },
   ["gitsigns.nvim"] = {
-    config = { 'require("config/gitsigns")' },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["go.nvim"] = {
-    config = { 'require("config/go")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/go.nvim",
     url = "https://github.com/ray-x/go.nvim"
   },
   harpoon = {
-    config = { 'require("config/harpoon")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["lightspeed.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/lightspeed.nvim",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
     url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["lsp_signature.nvim"] = {
-    config = { 'require("config/lsp-signature")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
@@ -190,44 +170,33 @@ _G.packer_plugins = {
     url = "https://github.com/onsails/lspkind-nvim"
   },
   ["mini.nvim"] = {
-    config = { 'require("config/mini")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/mini.nvim",
     url = "https://github.com/echasnovski/mini.nvim"
   },
   neogit = {
-    commands = { "Neogit" },
-    config = { 'require("config/neogit")' },
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/neogit",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
   },
   ["nightfox.nvim"] = {
-    config = { 'require("config/nightfox")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["null-ls.nvim"] = {
-    config = { 'require("config/null-ls")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
-    config = { 'require("config/cmp")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
-    config = { 'require("config/colorizer")' },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-installer"] = {
@@ -236,28 +205,21 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
-    config = { 'require("config/lsp")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-toggleterm.lua"] = {
-    config = { 'require("config/toggleterm")' },
-    keys = { { "", "<C-n>" }, { "", "<leader>fl" }, { "", "<leader>gt" } },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/opt/nvim-toggleterm.lua",
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua",
     url = "https://github.com/akinsho/nvim-toggleterm.lua"
   },
   ["nvim-tree.lua"] = {
-    config = { 'require("config/nvim-tree")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    config = { 'require("config/treesitter")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -283,7 +245,6 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["project.nvim"] = {
-    config = { 'require("config/project")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
@@ -294,14 +255,12 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
-    config = { 'require("config/telescope")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
     commands = { "TroubleToggle", "Trouble" },
-    config = { 'require("config/trouble")' },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -309,7 +268,6 @@ _G.packer_plugins = {
     url = "https://github.com/folke/trouble.nvim"
   },
   ["which-key.nvim"] = {
-    config = { 'require("config/which")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -317,96 +275,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-require("config/luasnip")
-time([[Config for LuaSnip]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("config/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("config/null-ls")
-time([[Config for null-ls.nvim]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-require("config/harpoon")
-time([[Config for harpoon]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require("config/cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: git-blame.nvim
-time([[Config for git-blame.nvim]], true)
-require("config/git-blame")
-time([[Config for git-blame.nvim]], false)
--- Config for: comment-box.nvim
-time([[Config for comment-box.nvim]], true)
-require("config/comment-box")
-time([[Config for comment-box.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-require("config/lsp-signature")
-time([[Config for lsp_signature.nvim]], false)
--- Config for: mini.nvim
-time([[Config for mini.nvim]], true)
-require("config/mini")
-time([[Config for mini.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: go.nvim
-time([[Config for go.nvim]], true)
-require("config/go")
-time([[Config for go.nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require("config/project")
-time([[Config for project.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require("config/which")
-time([[Config for which-key.nvim]], false)
--- Config for: nightfox.nvim
-time([[Config for nightfox.nvim]], true)
-require("config/nightfox")
-time([[Config for nightfox.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewClose lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewClose", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TroubleToggle lua require("packer.load")({'trouble.nvim'}, { cmd = "TroubleToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Trouble lua require("packer.load")({'trouble.nvim'}, { cmd = "Trouble", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neogit lua require("packer.load")({'neogit'}, { cmd = "Neogit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewFocusFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewFocusFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
--- Keymap lazy-loads
-time([[Defining lazy-load keymaps]], true)
-vim.cmd [[noremap <silent> <leader>gt <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>leader>gt", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <C-n> <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>C-n>", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <leader>fl <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>leader>fl", prefix = "" }, _G.packer_plugins)<cr>]]
-time([[Defining lazy-load keymaps]], false)
-
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'gitsigns.nvim', 'nvim-colorizer.lua', 'lightspeed.nvim'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

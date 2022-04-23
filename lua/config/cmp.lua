@@ -18,17 +18,16 @@ cmp.setup({
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
   },
-  experimental = { native_menu = false, ghost_text = false },
   mapping = {
     -- move up/down in the completion list
     ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
-    ["<C-j>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+    ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
 
     -- move up/down in the info list for a completion item
     ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
     ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
 
-    -- supposed to list all the mappings when you use this on nothing
+    -- lists all possible options
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 
     -- this will abort the completion list
@@ -72,7 +71,8 @@ cmp.setup({
       "s",
     }),
   },
-  -- formatting refers to how the completion list looks
+
+  -- formatting refers to how the completion list styling
   formatting = {
     format = lspkind.cmp_format({
       mode = "symbol", -- show only symbol annotations
@@ -104,18 +104,19 @@ cmp.setup({
     { name = "path" },
     { name = "rg", keyword_length = 5 },
   },
-  config = {
-    profile = {
-      enable = true,
-      threshold = 1 -- the amount in ms that a plugins load time must be over for it to be included in the profile
-    }
-  }
 })
 
 -- Use buffer source for `/`.
-cmp.setup.cmdline("/", { sources = { { name = "buffer" } } })
+cmp.setup.cmdline("/", {
+  sources = {
+    { name = "buffer" }
+  }
+})
 
 -- Use cmdline & path source for ':'.
 cmp.setup.cmdline(":", {
-  sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+  sources = cmp.config.sources(
+    { { name = "path" } },
+    { { name = "cmdline" } }
+  ),
 })
