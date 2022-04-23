@@ -56,22 +56,13 @@ local servers = {
 	"yamlls",
 }
 
--- Other Configs
--- https://github.com/JoosepAlviste/dotfiles/tree/master/config/nvim
--- https://github.com/ecosse3/nvim
--- https://github.com/lucax88x/configs
-
 -- Use a loop to conveniently call 'setup' on multiple servers
 for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup({
 
-		on_attach = function(client)
-			-- https://www.reddit.com/r/neovim/comments/pmvc7a/how_can_i_conditionally_add_to_the_on_attach/
-			if client.name == "sumneko_lua" then
-				client.resolved_capabilities.document_formatting = false
-				client.resolved_capabilities.document_range_formatting = false
-			end
-		end,
+	  -- https://www.reddit.com/r/neovim/comments/pmvc7a/how_can_i_conditionally_add_to_the_on_attach/
+		-- on_attach = function(client)
+		-- end,
 
 		before_init = function(_, config)
 			if lsp == "pyright" then
