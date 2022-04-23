@@ -91,7 +91,7 @@ return require("packer").startup(function(use)
 	use({
 		"ray-x/lsp_signature.nvim",
 		require = { "neovim/nvim-lspconfig" },
-		config = get_config("lsp-signature"),
+		config = get_config("lsp/lsp-signature"),
 	})
 
 	use("famiu/bufdelete.nvim")
@@ -101,7 +101,7 @@ return require("packer").startup(function(use)
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
-		config = get_config("null-ls"),
+		config = get_config("lsp/null-ls"),
 	})
 
 	use({

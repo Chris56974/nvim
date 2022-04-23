@@ -4,7 +4,6 @@ local diagnostics = nls.builtins.diagnostics
 
 nls.setup({
 	sources = {
-		formatting.stylua,
 		diagnostics.eslint,
 		diagnostics.golangci_lint,
 		formatting.prettier,

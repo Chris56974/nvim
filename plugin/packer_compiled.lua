@@ -185,7 +185,7 @@ _G.packer_plugins = {
     url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["lsp_signature.nvim"] = {
-    config = { 'require("config/lsp-signature")' },
+    config = { 'require("config/lsp/lsp-signature")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
@@ -217,7 +217,7 @@ _G.packer_plugins = {
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["null-ls.nvim"] = {
-    config = { 'require("config/null-ls")' },
+    config = { 'require("config/lsp/null-ls")' },
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
@@ -323,70 +323,70 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require("config/which")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: mini.nvim
-time([[Config for mini.nvim]], true)
-require("config/mini")
-time([[Config for mini.nvim]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-require("config/harpoon")
-time([[Config for harpoon]], false)
 -- Config for: nightfox.nvim
 time([[Config for nightfox.nvim]], true)
 require("config/nightfox")
 time([[Config for nightfox.nvim]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("config/null-ls")
-time([[Config for null-ls.nvim]], false)
 -- Config for: git-blame.nvim
 time([[Config for git-blame.nvim]], true)
 require("config/git-blame")
 time([[Config for git-blame.nvim]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+require("config/harpoon")
+time([[Config for harpoon]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
 time([[Config for nvim-cmp]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-require("config/luasnip")
-time([[Config for LuaSnip]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
 -- Config for: go.nvim
 time([[Config for go.nvim]], true)
 require("config/go")
 time([[Config for go.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: comment-box.nvim
-time([[Config for comment-box.nvim]], true)
-require("config/comment-box")
-time([[Config for comment-box.nvim]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-require("config/lsp-signature")
-time([[Config for lsp_signature.nvim]], false)
--- Config for: lf.vim
-time([[Config for lf.vim]], true)
-require("config/lf")
-time([[Config for lf.vim]], false)
 -- Config for: project.nvim
 time([[Config for project.nvim]], true)
 require("config/project")
 time([[Config for project.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: lf.vim
+time([[Config for lf.vim]], true)
+require("config/lf")
+time([[Config for lf.vim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+require("config/lsp/lsp-signature")
+time([[Config for lsp_signature.nvim]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+require("config/luasnip")
+time([[Config for LuaSnip]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("config/lsp/null-ls")
+time([[Config for null-ls.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require("config/which")
+time([[Config for which-key.nvim]], false)
+-- Config for: comment-box.nvim
+time([[Config for comment-box.nvim]], true)
+require("config/comment-box")
+time([[Config for comment-box.nvim]], false)
+-- Config for: mini.nvim
+time([[Config for mini.nvim]], true)
+require("config/mini")
+time([[Config for mini.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
@@ -394,13 +394,13 @@ time([[Config for nvim-tree.lua]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TroubleToggle lua require("packer.load")({'trouble.nvim'}, { cmd = "TroubleToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Trouble lua require("packer.load")({'trouble.nvim'}, { cmd = "Trouble", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neogit lua require("packer.load")({'neogit'}, { cmd = "Neogit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewFocusFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewFocusFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewClose lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewClose", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewFocusFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewFocusFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Trouble lua require("packer.load")({'trouble.nvim'}, { cmd = "Trouble", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TroubleToggle lua require("packer.load")({'trouble.nvim'}, { cmd = "TroubleToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neogit lua require("packer.load")({'neogit'}, { cmd = "Neogit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
@@ -414,7 +414,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'gitsigns.nvim', 'nvim-colorizer.lua', 'lightspeed.nvim'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
+vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'gitsigns.nvim', 'lightspeed.nvim', 'nvim-colorizer.lua'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
