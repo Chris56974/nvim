@@ -1,4 +1,3 @@
-require "config.nightfox"
 require "autocmd"
 require "mappings"
 require "options"
@@ -6,17 +5,22 @@ require "plugins"
 require "lsp"
 
 -- Plugin Configuration
+require "config.autopairs"
+require "config.autotag"
 require "config.cmp"
 require "config.colorizer"
+require "config.colorscheme"
+require "config.comment"
 require "config.luasnip"
 require "config.mini"
+require "config.neogit"
 require "config.nvim-tree"
 require "config.project"
+require "config.surround"
 require "config.telescope"
 require "config.toggle-term"
 require "config.treesitter"
 require "config.which"
-require "config.neogit"
 
 --[[
 

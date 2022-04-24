@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.configs").setup {
   ensure_installed = "all",
   highlight = { enable = true },
   indent = { enable = true },
@@ -11,4 +11,7 @@ require("nvim-treesitter.configs").setup({
       node_decremental = "<S-TAB>",
     },
   },
-})
+  context_commentstring = {
+    enable = true
+  }
+}

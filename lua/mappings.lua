@@ -1,15 +1,8 @@
 local map = vim.api.nvim_set_keymap -- map(mode, prev, after, opts)
-
 local default_options = { noremap = true }
 
--- map leader
 map("n", "<Space>", "<NOP>", default_options)
-vim.g.mapleader = " "
-
--- leader commands
-map("n", "<leader>w", ":w<CR>", default_options)
-map("n", "<leader>q", ":q<CR>", default_options)
-map("n", "<leader>e", ":NvimTreeToggle<CR>", default_options)
+vim.g.mapleader = " " -- leader commands are in the which.lua
 
 -- center search results after / or ?
 map("n", "n", "nzz", default_options)
@@ -42,9 +35,6 @@ map("", "<A-h>", "<C-w>h", default_options)
 map("", "<A-j>", "<C-w>j", default_options)
 map("", "<A-k>", "<C-w>k", default_options)
 map("", "<A-l>", "<C-w>l", default_options)
-
--- substitute command shortcut
-map("n", "S", ":%s//g<Left><Left>", default_options)
 
 -- remap control backspace to delete word
 map("i", "<C-h>", "<C-w>", default_options)

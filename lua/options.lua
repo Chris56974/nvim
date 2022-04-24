@@ -25,9 +25,8 @@ o.ignorecase = true -- ignore casing in patterns
 o.smartcase = true -- case insensitive search until first capital
 o.laststatus = 3 -- get a global status bar for all your splits
 o.signcolumn = "yes"
+g.gitblame_enabled = 0 -- default off
 
 -- Enable folding with treesitter
 -- o.foldmethod = "expr"
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
-
-g.gitblame_enabled = 0 -- default off

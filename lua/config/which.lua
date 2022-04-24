@@ -4,25 +4,14 @@ require("which-key").setup({})
 
 local wk = require("which-key")
 
--- Register Non-leader mappings
-wk.register({
-  ga = { "<Plug>(EasyAlign)", "Align", mode = "x" },
-  sa = "Add surrounding",
-  sd = "Delete surrounding",
-  sh = "Highlight surrounding",
-  sr = "Replace surrounding",
-  sF = "Find left surrounding",
-  sf = "Replace right surrounding",
-  sn = "# of lines to search for surrounding",
-  -- ss = { "<Plug>Lightspeed_s", "Search 2-character forward" },
-  -- SS = {"<Plug>Lightspeed_S", "Search 2-character backward"}
-})
+local default_options = { noremap = true }
 
 wk.register({
   ["<Tab>"] = { "<cmd>e#<cr>", "Switch to previously opened buffer" },
   ["="] = { "<c-w>=", "Equally size" },
-  ["_"] = { "<c-w>_", "Equally size" },
+  ["_"] = { "<c-w>_", "Max size" },
   [";"] = {
+
     A = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "Add Workspace Folder" },
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
     I = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Show implementations" },
@@ -68,27 +57,12 @@ wk.register({
 
   f = {
     name = "Files",
-    b = { "<cmd>Telescope file_browser<cr>", "File browser" },
     f = {
       "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'fd', '--hidden', '--type', 'file', '--follow'}})<cr>",
       "Find File",
     },
     l = { "<cmd>Lf<cr>", "Open LF" },
     p = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    s = { "<cmd>w<cr>", "Save Buffer" },
-    T = { "<cmd>NvimTreeFindFile<CR>", "Find in Tree" },
-    z = { "<cmd>Telescope zoxide list<CR>", "Zoxide" },
-  },
-
-  g = {
-    name = "Git",
-    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
     t = "Open Gitui", -- comand in toggleterm.lua
     n = { "<cmd>Neogit<cr>", "Open Neogit" },
     u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
@@ -158,7 +132,7 @@ wk.register({
     r = { "<cmd>Trouble lsp_references<cr>", "LSP References" },
   },
 
-  w = { ":w!<cr>", "Write", silent = true },
+  w = { ":w!<cr>", "Write", silent = true, noremap = true },
 
   z = {
     name = "Spelling",

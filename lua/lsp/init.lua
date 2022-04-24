@@ -1,11 +1,16 @@
 local lsp_installer = require "nvim-lsp-installer"
 local cmp_nvim_lsp  = require "cmp_nvim_lsp"
+
 require "lsp.signature"
+require "lsp.null-ls"
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 local on_attach = function(client) -- null-ls
+  if client.name == "tsserver" or client.name == "jsonls" then
+    client.resolved_capabilities.document_formatting = false
+  end
 end
 
 lsp_installer.on_server_ready(function(server)

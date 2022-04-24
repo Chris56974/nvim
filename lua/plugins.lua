@@ -14,6 +14,12 @@ return require("packer").startup(function(use)
 
   -- Code
   use "ray-x/go.nvim"
+  use 'ggandor/lightspeed.nvim'
+  use "ur4ltz/surround.nvim"
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   use "ThePrimeagen/harpoon"
@@ -29,7 +35,7 @@ return require("packer").startup(function(use)
 
   -- IDE
   use "kyazdani42/nvim-tree.lua"
-  use "EdenEast/nightfox.nvim"
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "folke/which-key.nvim"
   use "akinsho/nvim-toggleterm.lua"
   use "ahmedkhalf/project.nvim"
@@ -56,3 +62,5 @@ return require("packer").startup(function(use)
   use "f-person/git-blame.nvim"
 
 end)
+
+-- use 'lewis6991/impatient.nvim'
