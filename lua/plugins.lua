@@ -22,6 +22,8 @@ return require("packer").startup(function(use)
   use "norcalli/nvim-colorizer.lua"
   use "LudoPinelli/comment-box.nvim"
   use "nvim-treesitter/nvim-treesitter-textobjects"
+  use 'simrat39/rust-tools.nvim'
+  use 'mfussenegger/nvim-dap'
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", })
   use({ "folke/trouble.nvim", cmd = { "TroubleToggle", "Trouble" } })
 
@@ -33,7 +35,6 @@ return require("packer").startup(function(use)
   use "ahmedkhalf/project.nvim"
 
   -- Navigation
-  use "ggandor/lightspeed.nvim"
   use "nvim-telescope/telescope.nvim"
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 

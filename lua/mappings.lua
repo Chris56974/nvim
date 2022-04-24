@@ -1,8 +1,6 @@
--- You can find more of my keybinds in ./config/which.lua
-
 local map = vim.api.nvim_set_keymap -- map(mode, prev, after, opts)
 
-default_options = { noremap = true }
+local default_options = { noremap = true }
 
 -- map leader
 map("n", "<Space>", "<NOP>", default_options)

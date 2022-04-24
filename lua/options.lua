@@ -1,4 +1,5 @@
 local o = vim.opt
+local g = vim.g
 
 -- filetype plugin on
 -- syntax on
@@ -28,3 +29,5 @@ o.signcolumn = "yes"
 -- Enable folding with treesitter
 -- o.foldmethod = "expr"
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
+
+g.gitblame_enabled = 0 -- default off

@@ -27,18 +27,14 @@ g.nvim_tree_icons = {
 -- :h nvim-tree.OPTION_NAME
 require("nvim-tree").setup({
   disable_netrw = true,
-  -- open_on_setup_file = true,
-  -- open_on_setup = true,
   hijack_cursor = true,
   update_cwd = true,
   diagnostics = { enabled = true },
-
   actions = {
     open_file = {
       resize_window = true,
     },
   },
-
   update_focused_file = {
     enable = true,
     update_cwd = true,
