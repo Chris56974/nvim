@@ -39,6 +39,7 @@ return require("packer").startup(function(use)
   use "folke/which-key.nvim"
   use "akinsho/nvim-toggleterm.lua"
   use "ahmedkhalf/project.nvim"
+  use 'lewis6991/impatient.nvim'
 
   -- Navigation
   use "nvim-telescope/telescope.nvim"
@@ -62,5 +63,3 @@ return require("packer").startup(function(use)
   use "f-person/git-blame.nvim"
 
 end)
-
--- use 'lewis6991/impatient.nvim'
