@@ -2,6 +2,7 @@ local map = vim.api.nvim_set_keymap -- map(mode, prev, after, opts)
 local default_options = { noremap = true }
 
 map("n", "<Space>", "<NOP>", default_options)
+map("n", ";", "<NOP>", default_options)
 vim.g.mapleader = " " -- leader commands are in the which.lua
 
 -- center search results after / or ?
@@ -38,3 +39,6 @@ map("", "<A-l>", "<C-w>l", default_options)
 
 -- remap control backspace to delete word
 map("i", "<C-h>", "<C-w>", default_options)
+
+-- Find files using Telescope command-line sugar.
+map("n", "<c-p>", "<cmd>Telescope find_files<cr>", default_options)
