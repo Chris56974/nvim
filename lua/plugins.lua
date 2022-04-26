@@ -35,7 +35,8 @@ return require("packer").startup(function(use)
 
   -- IDE
   use "kyazdani42/nvim-tree.lua"
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "EdenEast/nightfox.nvim"
+  use "lunarvim/colorschemes"
   use "folke/which-key.nvim"
   use "akinsho/nvim-toggleterm.lua"
   use "ahmedkhalf/project.nvim"
@@ -57,9 +58,27 @@ return require("packer").startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
 
   -- Git
+  use 'ruifm/gitlinker.nvim'
   use "TimUntersberger/neogit"
   use "sindrets/diffview.nvim"
   use "lewis6991/gitsigns.nvim"
   use "f-person/git-blame.nvim"
 
 end)
+
+--[[
+
+If you lazy load a package with packer, make sure you pass in a callback
+for the config and not a require statement.
+
+``` lua
+function get_config(name)
+	return string.format('require("config/%s")', name)
+end
+
+use({ "lazy_loaded_plugin", config = require("plugin") }) -- ERROR
+use({ "ibid", config = get_config("plugin") })
+use "ibid" -- if you don't have any config this is fine too
+```
+
+--]]

@@ -3,6 +3,7 @@ local default_options = { noremap = true }
 
 map("n", "<Space>", "<NOP>", default_options)
 map("n", ";", "<NOP>", default_options)
+map("n", "t", "<NOP>", default_options)
 vim.g.mapleader = " " -- leader commands are in the which.lua
 
 -- center search results after / or ?
@@ -12,10 +13,6 @@ map("n", "N", "Nzz", default_options)
 -- stay in indent mode after indenting
 map("v", "<", "<gv", default_options)
 map("v", ">", ">gv", default_options)
-
--- open and close tab
-map("n", "t", ":tabedit<CR>", default_options)
-map("n", "T", ":tabclose<CR>", default_options)
 
 -- tab to switch buffers
 map("n", "<TAB>", ":bnext<CR>", default_options)

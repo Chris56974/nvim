@@ -1,19 +1,18 @@
 require("which-key").register({
+
   g = {
     name = "Git",
     a = { "<cmd>git add .<cr>", "add all" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    B = { "<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)" },
+    B = { "<cmd>Telescope git_bcommits<cr>", "Checkout commits (for the current file)" },
     c = { "<cmd>git commit<cr>", "commit" },
     C = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
+    d = { "<cmd>DiffviewOpen<cr>", "Diff", },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     n = { "<cmd>Neogit<cr>", "Open Neogit" },
     l = { "<cmd>GitBlameToggle<cr>", "Blame" },
-    L = { "<cmd>GitBlameToggle<cr>", "Toggle Blame" },
     g = { "<cmd>git add . && git commit<cr>", "add and commit all" },
-    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },

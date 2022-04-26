@@ -1,4 +1,4 @@
-require("project_nvim").setup({
+require("project_nvim").setup {
   patterns = {
     ".git",
     "package.json",
@@ -8,5 +8,5 @@ require("project_nvim").setup({
     "pyrightconfig.json",
     "pyproject.toml",
   },
-  detection_methods = { "pattern" },
-})
+  detection_methods = { "lsp", "pattern" },
+}
