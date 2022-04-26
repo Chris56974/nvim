@@ -36,11 +36,12 @@ return require("packer").startup(function(use)
   -- IDE
   use "kyazdani42/nvim-tree.lua"
   use "EdenEast/nightfox.nvim"
+  use 'folke/tokyonight.nvim'
   use "lunarvim/colorschemes"
   use "folke/which-key.nvim"
-  use "akinsho/nvim-toggleterm.lua"
   use "ahmedkhalf/project.nvim"
   use 'lewis6991/impatient.nvim'
+  use "Mofiqul/vscode.nvim"
 
   -- Navigation
   use "nvim-telescope/telescope.nvim"

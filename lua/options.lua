@@ -1,9 +1,6 @@
 local o = vim.opt
 local g = vim.g
 
--- filetype plugin on
--- syntax on
-
 o.autowrite = true -- write before running an external cmd
 o.clipboard = "unnamedplus" -- save to system clipboard
 o.fileencoding = "utf-8" -- used to be set encoding=utf-8
@@ -18,7 +15,7 @@ o.expandtab = true -- convert tabs into spaces
 o.tabstop = 2 -- each tab is 2 spaces
 o.smartindent = true -- use proper indentation when moving to new line
 o.shiftwidth = 2 -- number of spaces for each auto indent
-o.termguicolors = true -- for nvim-tree
+o.termguicolors = true
 o.timeoutlen = 500 -- timer until which-key shows up
 o.hlsearch = false -- remove search highlight
 o.ignorecase = true -- ignore casing in patterns
@@ -27,8 +24,13 @@ o.laststatus = 3 -- get a global status bar for all your splits
 o.signcolumn = "yes"
 g.gitblame_enabled = 0 -- default off
 
+-- g.tokyonight_style = "night"
 vim.cmd("colorscheme nightfox")
+-- vim.cmd("colorscheme onedarker")
 
 -- Enable folding with treesitter
 -- o.foldmethod = "expr"
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- To find highlight groups
+-- :h group-name

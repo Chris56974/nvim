@@ -239,11 +239,6 @@ _G.packer_plugins = {
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-toggleterm.lua"] = {
-    loaded = true,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua",
-    url = "https://github.com/akinsho/nvim-toggleterm.lua"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -309,6 +304,11 @@ _G.packer_plugins = {
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["trouble.nvim"] = {
     commands = { "TroubleToggle", "Trouble" },
     loaded = false,
@@ -316,6 +316,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/cj/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/cj/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   },
   ["which-key.nvim"] = {
     loaded = true,

@@ -1,14 +1,19 @@
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+
 return {
   settings = {
     Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        path = runtime_path,
+      },
       diagnostics = {
         globals = { "vim" }
       },
       workspace = {
-        library = { -- make the lua server aware of nvim runtime and plugins
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.stdpath("config") .. "/lua"] = true
-        },
+        library = vim.api.nvim_get_runtime_file("", true) -- make lsp aware of nvim runtime_path
       },
       telemetry = { enable = false },
     },
