@@ -1,16 +1,25 @@
 require("which-key").register({
 
-  d = {
-    name = "Debug",
-    p = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
-    c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-    i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
-    o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
-    O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
-    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
-    l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
-    u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
-    x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
-  },
+  [","] = { "<cmd>lua require('dap').toggle_breakpoint()<CR>", "Create" },
+  b = { "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", "Breakpoint Condition" },
+  c = { "<cmd>lua require('dap').continue()<CR>", "Continue" },
+  j = { "<cmd>lua require('dap').step_over()<CR>", "Step Over" },
+  i = { "<cmd>lua require('dap').step_into()<CR>", "Step Into" },
+  I = { "<cmd>DIInstall<cr>", "Debug Installer" },
+  k = { "<cmd>lua require('dap').step_out()<CR>", "Step Out" },
 
-}, { prefix = "<leader>", mode = "n" })
+  f = { "local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>", "Float" },
+  o = { "<cmd>lua require('dap').repl.open()<CR>", "Open" },
+  l = { "<cmd>lua require('dap').repl.run_last()<CR>", "Run Last" },
+  m = {
+    "<cmd>lua require('dap').set_breakpoint({ nil, nil, vim.fn.input('Log point message: ') })<CR>",
+    "Log Point Message",
+  },
+  t = { "<cmd>lua require('dap').toggle()<CR>", "Toggle" },
+  h = { "<cmd>lua require('dap.ui.variables').hover()<CR>", "Hover" },
+  v = { "<cmd>lua require('dap.ui.variables').visual_hover()<CR>", "Visual Hover" },
+  s = { "<cmd>lua require('dap').scopes()<CR>", "Scopes" },
+  u = { ":lua require('dapui').toggle()<CR>", "dapUI" },
+  w = { "<cmd>lua require('dap.ui.widgets').hover()<CR>", "Hover" },
+
+}, { prefix = ",", mode = "n" })

@@ -1,5 +1,3 @@
--- Debug
-
 require "autocmd"
 require "mappings"
 require "options"

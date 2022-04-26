@@ -19,13 +19,9 @@ wk.register({
 
   k = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover Commands" },
   K = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
-
   l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line diagnostics" },
-
   n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next Diagnostic" },
-
   p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
-
   q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
 
   R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },

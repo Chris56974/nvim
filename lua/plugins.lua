@@ -1,3 +1,20 @@
+--[[
+
+If you lazy load a package with packer, make sure you pass in a callback
+for the config and not a require statement.
+
+``` lua
+function get_config(name)
+	return string.format('require("config/%s")', name)
+end
+
+use({ "lazy_loaded_plugin", config = require("plugin") }) -- ERROR
+use({ "ibid", config = get_config("plugin") })
+use "ibid" -- if you don't have any config this is fine too
+```
+
+--]]
+
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
@@ -29,9 +46,15 @@ return require("packer").startup(function(use)
   use "LudoPinelli/comment-box.nvim"
   use "nvim-treesitter/nvim-treesitter-textobjects"
   use 'simrat39/rust-tools.nvim'
-  use 'mfussenegger/nvim-dap'
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", })
   use({ "folke/trouble.nvim", cmd = { "TroubleToggle", "Trouble" } })
+
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
+  use "Pocco81/dap-buddy.nvim"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/vim-ultest"
 
   -- IDE
   use "kyazdani42/nvim-tree.lua"
@@ -67,20 +90,3 @@ return require("packer").startup(function(use)
   use "f-person/git-blame.nvim"
 
 end)
-
---[[
-
-If you lazy load a package with packer, make sure you pass in a callback
-for the config and not a require statement.
-
-``` lua
-function get_config(name)
-	return string.format('require("config/%s")', name)
-end
-
-use({ "lazy_loaded_plugin", config = require("plugin") }) -- ERROR
-use({ "ibid", config = get_config("plugin") })
-use "ibid" -- if you don't have any config this is fine too
-```
-
---]]

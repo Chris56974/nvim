@@ -54,3 +54,4 @@ map("", "<A-v>", "<cmd>ToggleTerm size=80 direction=vertical<cr>", default_optio
 
 -- telescope
 map("n", "<c-p>", "<cmd>Telescope find_files<cr>", default_options)
+
