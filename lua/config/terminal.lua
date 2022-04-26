@@ -27,15 +27,3 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
-map("", "<A-1>", ":1ToggleTerm<cr>", default_options)
-map("", "<A-2>", ":2ToggleTerm<cr>", default_options)
-map("", "<A-3>", ":3ToggleTerm<cr>", default_options)
-map("", "<A-4>", ":4ToggleTerm<cr>", default_options)
-map("", "<A-5>", ":5ToggleTerm<cr>", default_options)
-map("", "<A-6>", ":6ToggleTerm<cr>", default_options)
-map("", "<A-7>", ":7ToggleTerm<cr>", default_options)
-map("", "<A-8>", ":8ToggleTerm<cr>", default_options)
-map("", "<A-9>", ":9ToggleTerm<cr>", default_options)
-map("", "<A-f>", "<cmd>ToggleTerm direction=float<cr>", default_options)
-map("", "<A-v>", "<cmd>ToggleTerm size=80 direction=vertical<cr>", default_options)

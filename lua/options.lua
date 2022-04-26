@@ -26,11 +26,7 @@ g.gitblame_enabled = 0 -- default off
 
 -- g.tokyonight_style = "night"
 vim.cmd("colorscheme nightfox")
--- vim.cmd("colorscheme onedarker")
 
 -- Enable folding with treesitter
 -- o.foldmethod = "expr"
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
-
--- To find highlight groups
--- :h group-name

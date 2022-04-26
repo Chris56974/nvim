@@ -8,7 +8,7 @@ telescope.setup({
   mappings = {
     n = {
       ["<C-c>"] = actions.close,
-    }
+    },
   },
   color_devicons = true,
 })

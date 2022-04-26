@@ -1,5 +1,5 @@
 local map = vim.api.nvim_set_keymap -- map(mode, prev, after, opts)
-local default_options = { noremap = true }
+local default_options = { noremap = true, silent = true }
 
 map("n", "<Space>", "<NOP>", default_options)
 map("n", ";", "<NOP>", default_options)
@@ -35,8 +35,21 @@ map("", "<A-j>", "<C-w>j", default_options)
 map("", "<A-k>", "<C-w>k", default_options)
 map("", "<A-l>", "<C-w>l", default_options)
 
--- remap control backspace to delete word
-map("i", "<C-h>", "<C-w>", default_options)
+-- Nvim-tree
+map("", "<A-e>", ":NvimTreeToggle", default_options)
 
--- Find files using Telescope command-line sugar.
+-- Terminal
+map("", "<A-1>", ":1ToggleTerm<cr>", default_options)
+map("", "<A-2>", ":2ToggleTerm<cr>", default_options)
+map("", "<A-3>", ":3ToggleTerm<cr>", default_options)
+map("", "<A-4>", ":4ToggleTerm<cr>", default_options)
+map("", "<A-5>", ":5ToggleTerm<cr>", default_options)
+map("", "<A-6>", ":6ToggleTerm<cr>", default_options)
+map("", "<A-7>", ":7ToggleTerm<cr>", default_options)
+map("", "<A-8>", ":8ToggleTerm<cr>", default_options)
+map("", "<A-9>", ":9ToggleTerm<cr>", default_options)
+map("", "<A-f>", "<cmd>ToggleTerm direction=float<cr>", default_options)
+map("", "<A-v>", "<cmd>ToggleTerm size=80 direction=vertical<cr>", default_options)
+
+-- telescope
 map("n", "<c-p>", "<cmd>Telescope find_files<cr>", default_options)
