@@ -1,5 +1,5 @@
 -- TODO
--- Debug, Terminal, Trouble, Harpoon
+-- Debug, Trouble
 
 require "autocmd"
 require "mappings"

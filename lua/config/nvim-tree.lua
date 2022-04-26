@@ -29,7 +29,6 @@ require("nvim-tree").setup({
   disable_netrw = true,
   hijack_cursor = true,
   update_cwd = true,
-  diagnostics = { enabled = true },
   actions = {
     open_file = {
       resize_window = true,

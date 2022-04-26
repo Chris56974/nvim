@@ -16,9 +16,9 @@ require("which-key").register({
   i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
 
   j = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Open File 1" },
-  k = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Open File 2" },
-  l = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Open File 3" },
-  [";"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Open File 4" },
+  k = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Open File 2" },
+  l = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Open File 3" },
+  [";"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Open File 4" },
 
   K = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
   U = { "<cmd>Telescope man_pages<cr>", "Man Pages" },

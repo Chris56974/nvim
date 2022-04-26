@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "EdenEast/nightfox.nvim"
   use 'folke/tokyonight.nvim'
+  use 'akinsho/toggleterm.nvim'
   use "lunarvim/colorschemes"
   use "folke/which-key.nvim"
   use "ahmedkhalf/project.nvim"

@@ -1,15 +1,16 @@
-require("which-key").register({
-  ["1"] = { "<cmd>lua require('harpoon.term').gotoTerminal(1)<cr>", "Go to term 1" },
-  ["2"] = { "<cmd>lua require('harpoon.term').gotoTerminal(2)<cr>", "Go to term 2" },
-  ["3"] = { "<cmd>lua require('harpoon.term').gotoTerminal(3)<cr>", "Go to term 3" },
-  ["4"] = { "<cmd>lua require('harpoon.term').gotoTerminal(4)<cr>", "Go to term 4" },
-  ["5"] = { "<cmd>lua require('harpoon.term').gotoTerminal(5)<cr>", "Go to term 5" },
+local map = vim.api.nvim_set_keymap -- map(mode, prev, after, opts)
+local default_options = { noremap = true }
 
-  t = {
-    ["1"] = { "<cmd>lua require('harpoon.term').sendCommand(1, 1)<cr>", "Go to term 1" },
-    ["2"] = { "<cmd>lua require('harpoon.term').sendCommand(2, 1)<cr>", "Go to term 2" },
-    ["3"] = { "<cmd>lua require('harpoon.term').sendCommand(3, 1)<cr>", "Go to term 3" },
-    ["4"] = { "<cmd>lua require('harpoon.term').sendCommand(4, 1)<cr>", "Go to term 4" },
-    ["5"] = { "<cmd>lua require('harpoon.term').sendCommand(5, 1)<cr>", "Go to term 5" },
-  }
+require("which-key").register({
+  ["1"] = { ":1ToggleTerm<cr>", "1" },
+  ["2"] = { ":2ToggleTerm<cr>", "2" },
+  ["3"] = { ":3ToggleTerm<cr>", "3" },
+  ["4"] = { ":4ToggleTerm<cr>", "4" },
+  ["5"] = { ":5ToggleTerm<cr>", "5" },
+  ["6"] = { ":6ToggleTerm<cr>", "6" },
+  ["7"] = { ":7ToggleTerm<cr>", "7" },
+  ["8"] = { ":8ToggleTerm<cr>", "8" },
+  ["9"] = { ":9ToggleTerm<cr>", "9" },
+  f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+  v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 }, { prefix = "t", mode = "n", noremap = true })
