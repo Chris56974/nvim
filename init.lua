@@ -1,5 +1,4 @@
--- TODO
--- Trouble, Debug
+-- Debug
 
 require "autocmd"
 require "mappings"

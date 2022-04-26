@@ -48,6 +48,7 @@ map("", "<A-6>", ":6ToggleTerm<cr>", default_options)
 map("", "<A-7>", ":7ToggleTerm<cr>", default_options)
 map("", "<A-8>", ":8ToggleTerm<cr>", default_options)
 map("", "<A-9>", ":9ToggleTerm<cr>", default_options)
+map("", "<A-q>", "<cmd>q<cr>", default_options)
 map("", "<A-f>", "<cmd>ToggleTerm direction=float<cr>", default_options)
 map("", "<A-v>", "<cmd>ToggleTerm size=80 direction=vertical<cr>", default_options)
 
