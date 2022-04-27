@@ -1,1 +1,1 @@
-require("gitlinker").setup() -- leader gy
+require('gitlinker').setup() -- leader gy

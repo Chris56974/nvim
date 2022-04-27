@@ -2,8 +2,8 @@ local o = vim.opt
 local g = vim.g
 
 o.autowrite = true -- write before running an external cmd
-o.clipboard = "unnamedplus" -- save to system clipboard
-o.fileencoding = "utf-8" -- used to be set encoding=utf-8
+o.clipboard = 'unnamedplus' -- save to system clipboard
+o.fileencoding = 'utf-8' -- used to be set encoding=utf-8
 o.number = true -- line numbers on the left
 o.relativenumber = true -- that are also relative
 o.splitbelow = true -- new windows are created below
@@ -21,11 +21,11 @@ o.hlsearch = false -- remove search highlight
 o.ignorecase = true -- ignore casing in patterns
 o.smartcase = true -- case insensitive search until first capital
 o.laststatus = 3 -- get a global status bar for all your splits
-o.signcolumn = "yes"
+o.signcolumn = 'yes'
 g.gitblame_enabled = 0 -- default off
 
 -- g.tokyonight_style = "night"
-vim.cmd("colorscheme nightfox")
+vim.cmd 'colorscheme nightfox'
 
 -- Enable folding with treesitter
 -- o.foldmethod = "expr"

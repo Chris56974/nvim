@@ -1,2 +1,2 @@
-require("mini.misc").setup()
-require("mini.cursorword").setup()
+require('mini.misc').setup()
+require('mini.cursorword').setup()

@@ -1,17 +1,17 @@
-local telescope = require "telescope"
-local actions = require "telescope.actions"
+local telescope = require 'telescope'
+local actions = require 'telescope.actions'
 
-telescope.setup({
+telescope.setup {
   defaults = {
-    file_ignore_patterns = { "node_modules", ".terraform" },
+    file_ignore_patterns = { 'node_modules', '.terraform' },
   },
   mappings = {
     n = {
-      ["<C-c>"] = actions.close,
+      ['<C-c>'] = actions.close,
     },
   },
   color_devicons = true,
-})
+}
 
-telescope.load_extension("fzf")
-telescope.load_extension("projects")
+telescope.load_extension 'fzf'
+telescope.load_extension 'projects'

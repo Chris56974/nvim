@@ -1,12 +1,12 @@
-local schemastore = require("schemastore")
+local schemastore = require 'schemastore'
 
 return {
   init_options = {
-    provideFormatter = false
+    provideFormatter = false,
   },
   settings = {
     json = {
       schemas = schemastore.json.schemas(),
-    }
-  }
+    },
+  },
 }

@@ -1,6 +1,6 @@
 local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
+table.insert(runtime_path, 'lua/?.lua')
+table.insert(runtime_path, 'lua/?/init.lua')
 
 return {
   settings = {
@@ -10,12 +10,12 @@ return {
         path = runtime_path,
       },
       diagnostics = {
-        globals = { "vim" }
+        globals = { 'vim' },
       },
       workspace = {
-        library = vim.api.nvim_get_runtime_file("", true) -- make lsp aware of nvim runtime_path
+        library = vim.api.nvim_get_runtime_file('', true), -- make lsp aware of nvim runtime_path
       },
       telemetry = { enable = false },
     },
-  }
+  },
 }

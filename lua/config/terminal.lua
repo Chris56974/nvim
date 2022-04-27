@@ -1,6 +1,6 @@
-require("toggleterm").setup {
+require('toggleterm').setup {
   open_mapping = [[<c-\>]],
-  direction = "float"
+  direction = 'float',
 }
 
 function _G.set_terminal_keymaps()
@@ -22,7 +22,6 @@ function _G.set_terminal_keymaps()
   vim.api.nvim_buf_set_keymap(0, 't', '<A-7>', [[<cmd>7ToggleTerm<cr>]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<A-8>', [[<cmd>8ToggleTerm<cr>]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<A-9>', [[<cmd>9ToggleTerm<cr>]], opts)
-
 end
 
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.cmd 'autocmd! TermOpen term://* lua set_terminal_keymaps()'

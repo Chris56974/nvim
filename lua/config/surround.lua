@@ -1,5 +1,5 @@
-require "surround".setup {
-  mappings_style = "surround"
+require('surround').setup {
+  mappings_style = 'surround',
 }
 
 --[[
