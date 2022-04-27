@@ -10,7 +10,6 @@ require("which-key").register({
   F = { "<cmd>Telescope live_grep<cr>", "Grep files" },
   h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
   H = { "<cmd>Telescope heading<cr>", "Find Header" },
-  i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
 
   j = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Open File 1" },
   k = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Open File 2" },
@@ -27,8 +26,9 @@ require("which-key").register({
 
   r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
   R = { "<cmd>Telescope registers<cr>", "Registers" },
-  s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
+
   S = { "<cmd>Telescope symbols<cr>", "Search symbols" },
+  s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 
   t = { "<cmd>Telescope live_grep<cr>", "Text" },
   z = { "<cmd>Telescope zoxide list<CR>", "Zoxide" },

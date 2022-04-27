@@ -5,6 +5,6 @@ local diagnostics = nls.builtins.diagnostics
 nls.setup({
   sources = {
     diagnostics.eslint,
-    formatting.eslint
+    formatting.prettier
   }
 })

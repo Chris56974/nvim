@@ -11,6 +11,10 @@ local on_attach = function(client) -- null-ls
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
+
+  if client.name == "jsonls" then
+    client.resolved_capabilities.document_formatting = false
+  end
 end
 
 lsp_installer.on_server_ready(function(server)
