@@ -8,7 +8,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 local on_attach = function(client) -- null-ls
-  if client.name == "tsserver" or client.name == "jsonls" then
+  if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
 end

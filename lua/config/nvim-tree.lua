@@ -24,6 +24,8 @@ g.nvim_tree_icons = {
   },
 }
 
+vim.g.nvim_tree_respect_buf_cwd = 1
+
 -- :h nvim-tree.OPTION_NAME
 require("nvim-tree").setup({
   disable_netrw = true,

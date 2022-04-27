@@ -337,11 +337,6 @@ _G.packer_plugins = {
     path = "/home/cj/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
-  ["vim-ultest"] = {
-    loaded = true,
-    path = "/home/cj/.local/share/nvim/site/pack/packer/start/vim-ultest",
-    url = "https://github.com/rcarriga/vim-ultest"
-  },
   ["vscode.nvim"] = {
     loaded = true,
     path = "/home/cj/.local/share/nvim/site/pack/packer/start/vscode.nvim",

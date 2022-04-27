@@ -1,4 +1,5 @@
 require("which-key").register({
+
   ["\\"] = { "<cmd>CBlbox<cr>", "Left text left box" },
   a = { "<cmd>CBclbox<cr>", "Center box left text" },
   s = { "<cmd>CBcrox<cr>", "Left box center text" },
@@ -7,4 +8,5 @@ require("which-key").register({
   r = { "<cmd>CBaclbox<cr>", "Center adapted box left text" },
   t = { "<cmd>CBacbox<cr>", "left adapted box centered text" },
   m = { "<cmd>CBaccbox<cr>", "center adapted centered text" },
+
 }, { prefix = "\\", mode = "n" })

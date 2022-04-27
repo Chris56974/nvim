@@ -1,4 +1,5 @@
 require("which-key").register({
+
   b = {
     name = "Buffers",
     b = { "<cmd>lua require'telescope.builtin'.buffers({ sort_mru = true, ignore_current_buffer = true })<cr>", "Find buffer" },
@@ -18,6 +19,7 @@ require("which-key").register({
   ["_"] = { "<c-w>_", "Max size" },
 
   e = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree" },
+  E = { "<cmd>NvimTreeRefresh<cr>", "Refresh Tree" },
   h = { "<C-w>h<cr>", "Move left" },
   j = { "<C-w>j<cr>", "Move down" },
   k = { "<C-w>k<cr>", "Move up" },

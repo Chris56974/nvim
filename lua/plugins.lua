@@ -54,7 +54,6 @@ return require("packer").startup(function(use)
   use "Pocco81/dap-buddy.nvim"
   use "rcarriga/nvim-dap-ui"
   use "theHamsta/nvim-dap-virtual-text"
-  use "rcarriga/vim-ultest"
 
   -- IDE
   use "kyazdani42/nvim-tree.lua"
@@ -90,3 +89,6 @@ return require("packer").startup(function(use)
   use "f-person/git-blame.nvim"
 
 end)
+
+-- use "rcarriga/vim-ultest"
+-- use "ray-x/go.nvim"

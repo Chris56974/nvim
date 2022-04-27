@@ -1,10 +1,11 @@
 local wk = require("which-key")
 
 wk.register({
-  a = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "Add Workspace Folder" },
-  A = { "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", "List Workspace Folders" },
 
-  c = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+  a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+
+  c = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "Add Workspace Folder to LSP" },
+  C = { "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", "List Workspace Folders in LSP" },
 
   d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
   D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
@@ -12,13 +13,14 @@ wk.register({
   e = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Show implementations" },
   E = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
 
-  f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+  f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format with LSP" },
 
   i = { "<cmd>LspInstallInfo<cr>", "LspInstallInfo" },
   I = { "<cmd>LspInfo<cr>", "LspInfo" },
 
   k = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover Commands" },
   K = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
+
   l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line diagnostics" },
   n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next Diagnostic" },
   p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
