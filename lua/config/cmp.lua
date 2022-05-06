@@ -72,7 +72,7 @@ cmp.setup {
     }),
   },
 
-  -- formatting refers to how the completion list styling
+  -- styling
   formatting = {
     format = lspkind.cmp_format {
       mode = 'symbol', -- show only symbol annotations
@@ -95,6 +95,7 @@ cmp.setup {
 
   -- This controls the order of the snippets
   sources = {
+    { name = 'nvim_lua' },
     { name = 'nvim_lsp' }, -- these are shown first
     { name = 'buffer', keyword_length = 5 },
     { name = 'luasnip' },

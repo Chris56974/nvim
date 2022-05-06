@@ -1,6 +1,7 @@
 local o = vim.opt
 local g = vim.g
 
+g.do_filetype_lua = 1 -- use lua for detecting file types
 o.autowrite = true -- write before running an external cmd
 o.clipboard = 'unnamedplus' -- save to system clipboard
 o.fileencoding = 'utf-8' -- used to be set encoding=utf-8

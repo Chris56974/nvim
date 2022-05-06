@@ -1,8 +1,4 @@
--- Debuggers are here
--- https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
-
 require('which-key').register({
-
   [','] = {
     "<cmd>lua require('dap').toggle_breakpoint()<CR>",
     'Create breakpoint',
@@ -43,3 +39,6 @@ require('which-key').register({
     'Hover dap ui widgets',
   },
 }, { prefix = ',', mode = 'n' })
+
+-- You can find debuggers here
+-- https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/

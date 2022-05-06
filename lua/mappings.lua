@@ -5,7 +5,6 @@ map('n', '<Space>', '<NOP>', default_options)
 map('n', ';', '<NOP>', default_options)
 map('n', 't', '<NOP>', default_options)
 map('n', '<Alt>', '<NOP>', default_options)
-vim.g.mapleader = ' ' -- leader commands are in the which.lua
 
 -- center search results after / or ?
 map('n', 'n', 'nzz', default_options)
