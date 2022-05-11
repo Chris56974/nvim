@@ -38,6 +38,18 @@ nls.setup {
     diagnostics.eslint_d,
     formatting.eslint_d,
   },
+  root_dir = lsp.util.root_pattern(
+    'stylua.toml',
+    '.eslintrc.js',
+    '.eslintrc.cjs',
+    '.eslintrc.yaml',
+    '.eslintrc.yml',
+    '.eslintrc.json',
+    '.prettierc',
+    '.prettierc.json',
+    '.prettierc.yaml',
+    '.prettierc.yml'
+  ),
 }
 
 lsp.angularls.setup {
@@ -133,6 +145,7 @@ lsp.tsserver.setup {
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gs', ':TSLspOrganize<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', ':TSLspRenameFile<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', ':TSLspImportAll<CR>', opts)
+    client.resolved_capabilities.document_formatting = false -- eslint_d
   end,
 }
 lsp.jsonls.setup {
